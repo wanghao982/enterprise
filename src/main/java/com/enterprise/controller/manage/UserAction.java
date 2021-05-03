@@ -384,7 +384,7 @@ public class UserAction extends BaseController<User> {
 		systemlog.setLoginIp(AddressUtil.getIp(RequestHolder.getRequest()));
 
 		String address = null;
-		if (!systemlog.getLoginIp().equals("127.0.0.1") && !systemlog.getLoginIp().equals("localhost")) {
+		/*if (!systemlog.getLoginIp().equals("127.0.0.1") && !systemlog.getLoginIp().equals("localhost")) {
 			// 获取指定IP的区域位置
 			try {
 				address = AddressUtil.getAddress("ip=" + systemlog.getLoginIp(), "utf-8");
@@ -407,7 +407,7 @@ public class UserAction extends BaseController<User> {
 					}
 				}
 			}
-		}
+		}*/
 		systemlogService.insert(systemlog);
 	}
 
